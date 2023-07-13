@@ -17,6 +17,7 @@ This flow allows you to build scalable, serverless architectures in AWS, where i
 
 <img src="https://user-images.githubusercontent.com/83971386/127896132-06db5721-51ec-4c5f-81ee-6e39d14fa803.png" width="90%"></img>
 
+
 ## Requirements
 | Name          | Version       |
 | ------------- |:-------------:|
