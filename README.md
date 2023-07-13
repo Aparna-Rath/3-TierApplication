@@ -17,7 +17,7 @@ This network architecture has Route53,cloudfront and S3 set in PRESENTATION LAYE
 
 This flow allows you to build scalable, serverless architectures in AWS, where incoming requests are routed through multiple services for handling and processing before reaching the desired backend data store, in this case, an RDS database.
 
-<img src="https://user-images.githubusercontent.com/83971386/127896132-06db5721-51ec-4c5f-81ee-6e39d14fa803.png" width="90%"></img>
+
 
 
 ## Requirements
