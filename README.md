@@ -2,7 +2,7 @@
 This network architecture has Route53,cloudfront and S3 set in presentation layer, API Gateway and lambda in Application Layer and RDS in Database layer.
 
 
-<img src="https://user-images.githubusercontent.com/83971386/127896132-06db5721-51ec-4c5f-81ee-6e39d14fa803.png" width="90%"></img>
+
 # Summary of Flow
 
 * Route 53 receives the initial request and routes it to the appropriate CloudFront distribution.
@@ -16,7 +16,7 @@ This network architecture has Route53,cloudfront and S3 set in presentation laye
 
 This flow allows you to build scalable, serverless architectures in AWS, where incoming requests are routed through multiple services for handling and processing before reaching the desired backend data store, in this case, an RDS database.
 
-
+<img src="https://user-images.githubusercontent.com/83971386/127896132-06db5721-51ec-4c5f-81ee-6e39d14fa803.png" width="90%"></img>
 
 ## Requirements
 | Name          | Version       |
@@ -32,9 +32,10 @@ This flow allows you to build scalable, serverless architectures in AWS, where i
 ## Modules
 | Name | Source |
 |------|--------|
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | three-tier-architecture/modules/vpc |
-| <a name="module_ec2"></a> [ec2](#module\_ec2) | three-tier-architecture/modules/ec2 |
-| <a name="module_rds"></a> [rds](#module\_rds) | three-tier-architecture/modules/rds |
+| <a name="api_gateway"></a> [vpc](#module\_api_gateway) | 3-tier-application/api_gateway |
+| <a name="module_cloudfront"></a> [cloudfront](#module\_cloudfront) | 3-tier-application/cloudfront |
+| <a name="module_rds"></a> [rds](#module\_rds) | 3-tier-application/rds |
+| <a name="module_rds"></a> [rds](#module\_rds) | 3-tier-application/rds |
 
 ## Resources
 | Name          | Type       |
