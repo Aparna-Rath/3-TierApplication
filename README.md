@@ -1,8 +1,8 @@
-#3-Tier-Architecture
+# 3-Tier-Architecture
 This network architecture has Route53,cloudfront and S3 set in PRESENTATION LAYER, API Gateway and lambda in APPLICATION LAYER and RDS in DATABASE LAYER.
 
 
-# Summary of Flow
+# Walk through the flow of request
 
 * Route 53 receives the initial request and routes it to the appropriate CloudFront distribution.
 * CloudFront acts as a CDN and forwards the request to API Gateway.
