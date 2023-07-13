@@ -1,19 +1,22 @@
 # Architecture
 This network architecture has Route53,cloudfront and S3 set in presentation layer, API Gateway and lambda in Application Layer and RDS in Database layer.
 
+
+<img src="https://user-images.githubusercontent.com/83971386/127896132-06db5721-51ec-4c5f-81ee-6e39d14fa803.png" width="90%"></img>
+# Prerequisites
 1.Route 53 receives the initial request and routes it to the appropriate CloudFront distribution.
-####2.CloudFront acts as a CDN and forwards the request to API Gateway.
-####3.API Gateway receives the request and can perform authentication, authorization, and request/response transformations.
-####4.API Gateway triggers a Lambda function associated with the endpoint.
-####5.Lambda executes the code logic defined in the function, which may include interacting with the RDS database.
+2.CloudFront acts as a CDN and forwards the request to API Gateway.
+3.API Gateway receives the request and can perform authentication, authorization, and request/response transformations.
+4.API Gateway triggers a Lambda function associated with the endpoint.
+5.Lambda executes the code logic defined in the function, which may include interacting with the RDS database.
 6.Lambda returns the response to API Gateway.
 7.API Gateway returns the response to CloudFront.
 8.CloudFront caches and delivers the response to the client.
 
+
 This flow allows you to build scalable, serverless architectures in AWS, where incoming requests are routed through multiple services for handling and processing before reaching the desired backend data store, in this case, an RDS database.
 
-<img src="https://user-images.githubusercontent.com/83971386/127896132-06db5721-51ec-4c5f-81ee-6e39d14fa803.png" width="90%"></img>
-# Prerequisites
+
 * An AWS Account with an IAM user capable of creating resources – `AdminstratorAccess`
 * A locally configured AWS profile for the above IAM user
 * Terraform installation - [steps](https://learn.hashicorp.com/tutorials/terraform/install-cli)
