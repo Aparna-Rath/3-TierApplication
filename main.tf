@@ -96,6 +96,25 @@ module "cloudfront" {
   edge_lambda_html_qualified_arn = "${module.edge_lambdas.edge_lambda_html_qualified_arn}"
 }
 
+module "rds" {
+  source               = "./rds"
+  project_name         = var.project_name
+  environment          = var.environment
+  engine_name          = var.engine_name
+  engine_version       = var.engine_version
+  storage              = var.storage
+  db_subnet_group_name = module.vpc.aws_db_subnet_group_main
+  identifier           = var.identifier
+  instance_class       = var.instance_class
+  multi_az             = var.multi_az
+  database_name        = var.database_name
+  database_username    = var.database_username
+  database_password    = var.database_password
+  database_port        = var.database_port
+  publicly_accessible  = var.publicly_accessible
+  db_security_group    = module.vpc.db_security_group
+  database_snapshot    = var.database_snapshot
+}
 
 
 # OUTPUT
