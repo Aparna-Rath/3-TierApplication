@@ -1,6 +1,8 @@
 # 3-Tier-Architecture
 This network architecture has Route53,cloudfront and S3 set in PRESENTATION LAYER, API Gateway and lambda in APPLICATION LAYER and RDS in DATABASE LAYER.
 
+![3-tierenv](https://github.com/Aparna-Rath/3-TierApplication/assets/139382097/e62a244a-fd81-4829-ae3f-8a4b11e07947)
+
 
 # Walk through the flow of request
 
