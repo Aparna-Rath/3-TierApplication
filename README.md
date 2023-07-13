@@ -1,6 +1,5 @@
-# Architecture
-This network architecture has Route53,cloudfront and S3 set in presentation layer, API Gateway and lambda in Application Layer and RDS in Database layer.
-
+#3-Tier-Architecture
+This network architecture has Route53,cloudfront and S3 set in PRESENTATION LAYER, API Gateway and lambda in APPLICATION LAYER and RDS in DATABASE LAYER.
 
 
 # Summary of Flow
@@ -32,24 +31,9 @@ This flow allows you to build scalable, serverless architectures in AWS, where i
 ## Modules
 | Name | Source |
 |------|--------|
-| <a name="api_gateway"></a> [vpc](#module\_api_gateway) | 3-tier-application/api_gateway |
+| <a name="api_gateway"></a> [api_gateway](#module\_api_gateway) | 3-tier-application/api_gateway |
 | <a name="module_cloudfront"></a> [cloudfront](#module\_cloudfront) | 3-tier-application/cloudfront |
 | <a name="module_rds"></a> [rds](#module\_rds) | 3-tier-application/rds |
-| <a name="module_rds"></a> [rds](#module\_rds) | 3-tier-application/rds |
+| <a name="module_lambdas"></a> [lambdas](#module\_lambdas) | 3-tier-application/lambdas |
+| <a name="module_route53"></a> [route53](#module\_route53) | 3-tier-application/route53 |
 
-## Resources
-| Name          | Type       |
-| ------------- |:-------------:|
-| [aws_launch_template](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_launch_template) | resource |
-| [aws_db_instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_db_instance) | resource |
-| [aws_vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_vpc) | resource |
-| [aws_subnet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_subnet) | resource |
-| [aws_internet_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_internet_gateway) | resource |
-| [aws_route_table](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_route_table) | resource |
-| [aws_route_table_association](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_route_table_association) | resource |
-| [aws_lb](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_lb) | resource |
-| [aws_lb_listener](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_lb_listener) | resource |
-| [aws_lb_target_group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_lb_target_group) | resource |
-| [aws_autoscaling_group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_autoscaling_group) | resource |
-| [aws_db_subnet_group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_db_subnet_group) | resource |
-| [aws_security_group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_security_group) | resource |
